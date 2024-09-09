@@ -6,14 +6,8 @@ public class Main {
     // - Display all the current Todo's
     
     public static void main(String args[]) {
-        Todo t1 = new Todo();
-        Todo t2 = new Todo("Random Title", "Trash description");
+        TodoController tc = new TodoController();
+
         
-        Container c = new Container();
-
-        c.addTodo(t1);
-        c.addTodo(t2);
-
-        c.displayContainer();
     }
 }

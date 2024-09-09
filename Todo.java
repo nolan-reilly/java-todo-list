@@ -1,7 +1,10 @@
+import java.util.Date;
+
 public class Todo {
     private String title;
     private String description;
     private boolean completed;
+    private Date date = new Date();
 
     public Todo() {
         this.title = "No title";
@@ -18,20 +21,21 @@ public class Todo {
     }
 
     public void displayInfo() {
-        System.out.println("Title: " + this.title + "\nDescription: " + this.description + "\nCompleted: " + this.completed);
-    }
-
-
-    public void toggleCompleted() {
-        if (this.completed) {
-            this.completed = false;
-        } else {
-            this.completed = true;
-        }
+        System.out.println( "Title: " + this.title + 
+                            "\nDescription: " + this.description + 
+                            "\nCompleted: " + this.completed +
+                            "\nDate: " + this.getDate());
     }
 
     public String getTitle() { return this.title; }
+    public void editTitle(String newTitle) { this.title = newTitle; }
+
     public String getDescription() { return this.description; }
+    public void editDescription(String newDescription) { this.description = newDescription; }
+
     public boolean getCompleted() { return this.completed; }
+    public void toggleCompleted() { this.completed = this.completed ? false : true; }
+
+    private Date getDate() { return date; }
     
 }
