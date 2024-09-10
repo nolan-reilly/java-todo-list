@@ -10,7 +10,7 @@ public class Container {
 
     // Display all container todo data
     public void displayContainer() {
-        for (int i = 0; i < getContainerSize(); i++) {
+        for (int i = 0; i < containerSize(); i++) {
             System.out.println("Index: " + i);
             container.get(0).displayInfo();
             System.out.println(); // Output an empty line
@@ -18,7 +18,8 @@ public class Container {
     }
 
     // Return the size of the container
-    private int getContainerSize() { return this.container.size(); }
+    private int containerSize() { return this.container.size(); }
     
+    // Don't worry about this until later
     // Todo: Create function to Sort container by date
 }
